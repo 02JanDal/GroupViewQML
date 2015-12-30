@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/xyz/jandal/groupview">
+        <file>qml/GroupView.qml</file>
+        <file>qml/ScrollBar.qml</file>
+    </qresource>
+</RCC>
