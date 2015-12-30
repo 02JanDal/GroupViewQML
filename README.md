@@ -4,6 +4,8 @@ This project provides a GroupView (like can be seen in OS settings overview dial
 
 The current main use-case is for desktop, but it should also work on mobile.
 
+![Screenshot](screenshot.png)
+
 Current features include:
 
 * Uses a standard QAbstractItemModel derived tree
