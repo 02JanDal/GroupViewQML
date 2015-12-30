@@ -1,4 +1,4 @@
-# GroupView
+# GroupView [![Build Status](https://travis-ci.org/MultiMC/MultiMC5.svg?branch=develop)](https://travis-ci.org/MultiMC/MultiMC5)
 
 This project provides a GroupView (like can be seen in OS settings overview dialogs and similar) for usage with QtQuick.
 

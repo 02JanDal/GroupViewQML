@@ -1,0 +1,40 @@
+language: cpp
+cache:
+  apt: true
+  directories:
+    - $HOME/homebrewcache
+    - /opt/cmake-3
+
+notifications:
+  email: false
+sudo: required
+
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+      - llvm-toolchain-precise-3.5
+      - llvm-toolchain-precise-3.6
+
+compiler:
+ - clang
+ - gcc
+os:
+ - linux
+ - osx
+env:
+ - QT_VERSION=5.5.1
+matrix:
+  exclude:
+    - os: osx
+      compiler: gcc
+
+install:
+ - source travis-prepare.sh
+before_script:
+ - mkdir build && cd build
+ - cmake -DCMAKE_PREFIX_PATH=$CMAKE_PREFIX_PATH -DCMAKE_INSTALL_PREFIX=install ..
+script:
+ - make -j4
+ - #make test ARGS="-V"
+ - make install
